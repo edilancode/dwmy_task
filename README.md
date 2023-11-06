@@ -54,7 +54,7 @@
 ## Usage:
 - When the application starts, the "All" option will be set on an it will display a list with all tasks previously added.
 
-- To add a new task, just select Day, Week, Month or Year on the nav bar, write a title of task into the text fild input and click Add button.
+- To add a new task, just select Day, Week, Month or Year on the nav bar, write a title of task into the text field input and click Add button.
 
 - Each task has buttons to edit and delete it and a checkbox to mark as complete task.
 
@@ -63,7 +63,7 @@
 - To delete a task, click on the trash icon of respective task.
 
 
-## Fell free to create inssues and contributions for features or bugs to this project.
+## Fell free to create issues and contributions for features or bugs to this project.
 
 
 
