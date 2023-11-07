@@ -19,33 +19,33 @@ function App() {
       id: 2,
       title:"Finish visual Design",
       period: "Week",
-      date: '10 03 2023',
+      date: '10/03/2023',
       isChecked: false,
     },
     {
       id: 3,
       title: "Do research",
       period: "Month",
-      date: '10 02 2023',
+      date: '10/02/2023',
       isChecked: false,
     },
     {
       id: 4,
       title: "Reading about best pratices in React",
       period: "Year",
-      date: '07 08 2022',
+      date: '07/08/2022',
       isChecked: false,
     },
 ]);
     
   const time = moment();
-  const dayMonthYear = time.format('MMMM DD YYYY');
+  const dayMonthYear = time.format('MMMM/DD/YYYY');
   
   const [value, setValue] = useState("");
   const [edit, setEdit] = useState(null);
   const [period, setPeriod] = useState("");
   const [mainDisplay, setMainDisplay] = useState(time.format('dddd'))
-  const dates = time.format('MM DD YYYY');
+  const dates = time.format('MM/DD/YYYY');
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -120,10 +120,14 @@ function App() {
   const removeTask = (id) => {
     const storedList = JSON.parse(localStorage.getItem('localTasks'));
     const newTasks = [...storedList];
-    const filteredTasks = newTasks.filter(task => task.id !== id ? task : null);
+    const result = confirm("Want to delete?");
+    if (result) {
+      const filteredTasks = newTasks.filter(task => task.id !== id ? task : null);
     localStorage.setItem('localTasks', JSON.stringify([...filteredTasks]));
       updateTask();
       setValue("");
+    }
+    
     };
 
   const resetTasks = () => {
